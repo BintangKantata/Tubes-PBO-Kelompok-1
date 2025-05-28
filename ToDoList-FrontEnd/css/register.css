@@ -1,0 +1,143 @@
+.container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+.form-section {
+  flex: 1;
+  padding: 40px 50px;
+  background-color: #fff;
+}
+
+.info-section {
+  flex: 1;
+  padding: 40px;
+  background: linear-gradient(to bottom, #43B8E2 30%, #35ABE3 55%, #0073C6 100%);
+  color: white;
+  overflow-y: auto;
+}
+
+.branding {
+  margin-bottom: 8px;
+}
+
+.welcome {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: -10px;
+  color: #000;
+}
+
+.login-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.form-section label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.remember-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+input[type="checkbox"] {
+  accent-color: #0073C6;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to left, #279FE5 0%, #0073C6 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.features-title {
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.features-list {
+  padding-left: 20px;
+}
+
+.features-list li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 25px;
+  border-radius: 10px;
+  width: 60%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
