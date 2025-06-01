@@ -56,3 +56,4 @@ public class RegularUser extends user{
         this.email = email;
     }
 }
+
