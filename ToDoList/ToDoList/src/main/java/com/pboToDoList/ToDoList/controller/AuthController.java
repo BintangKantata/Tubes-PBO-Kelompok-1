@@ -63,11 +63,8 @@ public class AuthController {
         return "redirect:/auth/login";
     }
 
-    @PostMapping("/login")
-    public String login(@RequestBody RegularUser loginData) {
-        return ruserRepository.findByUsername(loginData.getUsername())
-                .filter(user -> user.getPassword().equals(loginData.getPassword()))
-                .map(user -> "Login successful for: " + user.getUsername())
-                .orElse("Invalid username or password.");
+    @GetMapping("/login")
+    public String login() {
+        return "login"; // serves login.html
     }
 }
