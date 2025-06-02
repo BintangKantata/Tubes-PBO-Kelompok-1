@@ -68,8 +68,16 @@ public class TaskImplements implements EveryTask {
     public List<Task> getTasksForUser(RegularUser user) {
         return taskRepository.findByRuser(user);
     }
+
     @Override
     public Optional<Task> findById(int taskId){
         return taskRepository.findById(taskId);
     }
+
+    @Override
+    public List<Task> searchAndFilterTasks(String title, Integer categoryId, TaskPriority priority, Boolean completed, RegularUser user) {
+        if (title == null) title = "";
+        return taskRepository.findByFilters(title, categoryId, priority, completed, user);
+    }
+
 }
