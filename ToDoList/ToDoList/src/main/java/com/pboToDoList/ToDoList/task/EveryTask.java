@@ -12,4 +12,5 @@ public interface EveryTask {
     public abstract List<Task> getAllTasks();
     List<Task> getTasksForUser(RegularUser user);
     Optional<Task> findById(int taskId);
+    public List<Task> searchAndFilterTasks(String title, Integer categoryId, TaskPriority priority, Boolean completed, RegularUser user);
 }
