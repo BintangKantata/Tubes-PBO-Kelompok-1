@@ -118,4 +118,24 @@ public class TaskController {
 
         return "redirect:/task/my-tasks";
     }
+    @GetMapping("/search")
+    public String searchAndFilterTasks(@RequestParam(required = false) String title,
+                                       @RequestParam(required = false) Integer categoryId,
+                                       @RequestParam(required = false) TaskPriority priority,
+                                       @RequestParam(required = false) Boolean completed,
+                                       Model model,
+                                       Authentication authentication) {
+
+        String email = authentication.getName();
+        RegularUser user = ruserRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        List<Task> tasks = etask.searchAndFilterTasks(title, categoryId, priority, completed, user);
+
+        model.addAttribute("tasks", tasks);
+        model.addAttribute("categories", categoryService.getCategoriesByUser(user));
+        model.addAttribute("priorities", TaskPriority.values());
+        model.addAttribute("user", user);
+        return "my-tasks";
+    }
 }
